@@ -1,0 +1,20 @@
+//Criar um algoritmo que leia uma string, ordenar as letras em ordem crescente no Bubblesort
+const prompt = require('prompt-read')
+
+console.clear()
+
+var x = prompt("Escreva uma palavra: ", String)
+x = x.split("") // sem espaço ele separa as letras, com espaço ele separa por espaços entre as palavras
+
+console.log('Sem ajuste: ', x)
+
+for (n = 1; n <= x.length; n++){
+    for(i = 0; i <= x.length; i++){
+        if ((x[i] > x[i + 1])){
+            var aux = x[i]
+            x[i] = x[i + 1]
+            x[i + 1] = aux
+        }
+    }
+}
+console.log('Ajustado: ', x)
